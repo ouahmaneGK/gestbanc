@@ -44,5 +44,6 @@ public class User {
 	
 	@Column(name = "MDP", nullable = false)
 	private String mdp;
+
 	
 }
