@@ -17,33 +17,33 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Administrateur {
+public class Administrateur extends User {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	//private List<Conseiller> conseiller;
+	private List<Conseiller> conseiller;
 	private  List<DemandeOuverture> demande;
 	
-//	public String creationConseiller(){
-//		return listeConseillers;
-//		
-//	}
-//	
-//	public void supprimerConseiller(){
-//		
-//	}
-//	
-//	public String reaffectationClient(){
-//		return ;
-//			
-//	}
-//	
-//	public String affectationDemandeOuverture(){
-//		return ;
-//		
-//	}
+/*	public String creationConseiller(){
+		return null;
+		
+	}
 	
+	public void supprimerConseiller(conseiller){
+		
+	}
+	
+	public String reaffectationClient(client, conseiller){
+		return null;
+			
+	}
+	
+	public String affectationDemandeOuverture(demande, conseiller){
+		return null;
+		
+	}
+	*/
 	
 	
 
