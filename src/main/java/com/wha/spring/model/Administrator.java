@@ -13,5 +13,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Table(name = "Administrator")
 public class Administrator {
+	
+	
 
 }

@@ -25,9 +25,9 @@ public class UserController {
 
 	@RequestMapping(value = "/create/dummy", method = RequestMethod.GET)
 	public void dummy() {
-		User u1 = new User(0, "Jemal Ahmed", "Ahmed.Jemal", "jmlhmd@gmail.com");
-		User u2 = new User(0, "Leanne Graham", "Bret", "Sincere@april.biz");
-		User u3 = new User(0, "Clementina DuBuque", "Moriah.Stanton", "Rey.Padberg@karina.biz");
+		User u1 = new User(0, "Jemal Ahmed", "Ahmed.Jemal", "jmlhmd@gmail.com", null, null, null, null);
+		User u2 = new User(0, "Leanne Graham", "Bret", "Sincere@april.biz", null, null, null, null);
+		User u3 = new User(0, "Clementina DuBuque", "Moriah.Stanton", "Rey.Padberg@karina.biz", null, null, null, null);
 		userService.saveUser(u1);
 		userService.saveUser(u2);
 		userService.saveUser(u3);
