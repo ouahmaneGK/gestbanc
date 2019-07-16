@@ -1,9 +1,11 @@
 package com.wha.spring.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -26,5 +28,8 @@ public class ClientPotentiel {
 	private String telephone;
 	private int revenuMens;
 	private String piecesJustif;
+	
+	@OneToOne(cascade= {CascadeType.PERSIST})
+	private DemandeOuverture demandeOuverture;
 
 }
