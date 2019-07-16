@@ -32,24 +32,27 @@ public class UserController {
 		userService.saveUser(u2);
 		userService.saveUser(u3);
 	}
-	@CrossOrigin(origins = "http://localhost:4200")
+	//@CrossOrigin(origins = "http://localhost:4200")
 	@RequestMapping(value = "/get/all", method = RequestMethod.GET)
 	public ResponseEntity<List<User>> getAll() {
 		List<User> resultat = userService.findAllUsers();
 		return new ResponseEntity<List<User>>(resultat, HttpStatus.OK);
 	}
 
-	@CrossOrigin(origins = "http://localhost:4200")
+	//@CrossOrigin(origins = "http://localhost:4200")
 	@PostMapping("/create")
 	public User createUser(@RequestBody User user) {
 		User newUser = userService.saveUser(user);
 		return newUser;
 	}
 
-	@CrossOrigin(origins = "http://localhost:4200")
+	//@CrossOrigin(origins = "http://localhost:4200")
 	@PutMapping("/update")
 	public User updateUser(@RequestBody User user) {
 		userService.updateUser(user);
 		return user;
 	}
+	
+	
+	
 }
