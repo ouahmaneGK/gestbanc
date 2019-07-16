@@ -3,11 +3,9 @@ package com.wha.spring.model;
 import java.util.List;
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -20,18 +18,17 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "CLIENT")
+@DiscriminatorValue("CLIENT")
 public class Client extends User {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	//@Column(nullable=false, unique=true)
+	//private int identifiant;
 	
-	@Column(name = "REVENUMENS", nullable = false)
+	@Column(name = "REVENUMENS", nullable = true)
 	private double revenuMens;
 	
-	@Column(name = "CONSEILLER", nullable = false)
-	private String conseiller;
+	@OneToOne(mappedBy="client")
+	private Conseiller conseiller;
 	
 	/*@OneToMany
 	private List <Compte> listeComptes [];

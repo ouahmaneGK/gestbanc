@@ -32,7 +32,7 @@ public class UserController {
 		userService.saveUser(u2);
 		userService.saveUser(u3);
 	}
-	@CrossOrigin(origins = "http://localhost:4200")
+	//@CrossOrigin(origins = "http://localhost:4200")
 	@RequestMapping(value = "/get/all", method = RequestMethod.GET)
 	public ResponseEntity<List<User>> getAll() {
 		List<User> resultat = userService.findAllUsers();
@@ -52,4 +52,7 @@ public class UserController {
 		userService.updateUser(user);
 		return user;
 	}
+	
+	
+	
 }
