@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,7 +24,10 @@ public class DemandeOuverture {
 	private int id;
 	private String clientPotentiel; 
 	private boolean valide; 
-	//private List<Conseiller> conseiller; 
+	private List<Conseiller> conseiller; 
+	
+	@OneToOne(mappedBy="demandeOuverture")
+	private ClientPotentiel clientpotentiel;
 	
 
 }

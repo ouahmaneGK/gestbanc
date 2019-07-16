@@ -6,9 +6,9 @@ import java.util.List;
 import com.wha.spring.model.User;
 
 public interface UserDao {
-	User saveUser(User employee);
+	User saveUser(User user);
 
-	void updateUser(User employee);
+	void updateUser(User user);
 
 	public List<User> findAllUsers();
 
@@ -16,3 +16,5 @@ public interface UserDao {
 
 	void deleteUser(int id);
 }
+
+

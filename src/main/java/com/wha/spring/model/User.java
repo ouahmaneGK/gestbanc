@@ -24,25 +24,25 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
-	@Column(name = "NOM", nullable = false)
+	@Column(name = "NOM", nullable = true)
 	private String nom;
 	
-	@Column(name = "PRENOM", nullable = false)
+	@Column(name = "PRENOM", nullable = true)
 	private String prenom;
 	
-	@Column(name = "EMAIL", nullable = false)
+	@Column(name = "EMAIL", nullable = true)
 	private String email;
 	
-	@Column(name = "ADRESSE", nullable = false)
+	@Column(name = "ADRESSE", nullable = true)
 	private String adresse;
 	
-	@Column(name = "TELEPHONE", nullable = false)
+	@Column(name = "TELEPHONE", nullable = true)
 	private String telephone;
 	
-	@Column(name = "PSEUDO", nullable = false)
+	@Column(name = "PSEUDO", nullable = true)
 	private String pseudo;
 	
-	@Column(name = "MDP", nullable = false)
+	@Column(name = "MDP", nullable = true)
 	private String mdp;
 
 	

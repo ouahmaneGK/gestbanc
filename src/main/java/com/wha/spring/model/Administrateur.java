@@ -23,28 +23,7 @@ public class Administrateur extends User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private List<Conseiller> conseiller;
-	private  List<DemandeOuverture> demande;
-	
-/*	public String creationConseiller(){
-		return null;
-		
-	}
-	
-	public void supprimerConseiller(conseiller){
-		
-	}
-	
-	public String reaffectationClient(client, conseiller){
-		return null;
-			
-	}
-	
-	public String affectationDemandeOuverture(demande, conseiller){
-		return null;
-		
-	}
-	*/
-	
+	private  List<DemandeOuverture> demandeOuverture;
 	
 
 }
