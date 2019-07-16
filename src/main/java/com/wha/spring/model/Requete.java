@@ -1,11 +1,13 @@
 package com.wha.spring.model;
 
-import java.util.List;
-
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,34 +19,20 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Administrateur extends User {
+@Table(name = "REQUET")
+public class Requete {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private List<Conseiller> conseiller;
-	private  List<DemandeOuverture> demande;
 	
-/*	public String creationConseiller(){
-		return null;
-		
-	}
+    @ManyToOne
+	private Compte compte;
 	
-	public void supprimerConseiller(conseiller){
-		
-	}
+	@Column(name = "MESSAGE", nullable = false)
+	private String message;
 	
-	public String reaffectationClient(client, conseiller){
-		return null;
-			
-	}
-	
-	public String affectationDemandeOuverture(demande, conseiller){
-		return null;
-		
-	}
-	*/
-	
-	
+	@Column(name = "TYPE", nullable = false)
+	private String type;
 
 }
