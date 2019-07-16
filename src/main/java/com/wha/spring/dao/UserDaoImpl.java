@@ -28,7 +28,6 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
 	}
 
 	public User findById(int id) {
-		// Appel de la méthod init de la class Logger
 		return (User) em.find(User.class, id);
 	}
 
