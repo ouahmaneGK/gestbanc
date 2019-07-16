@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -26,31 +27,17 @@ public class Administrateur extends User {
 	
 	@OneToMany(mappedBy="administrateur")
 	private List<Conseiller> conseillers;
+	
 	@OneToMany
 	private  List<DemandeOuverture> demandeOuverture;
 
+	@Builder
+	public Administrateur(int id, String nom, String prenom, String email,
+			String adresse, String telephone, String pseudo, String mdp) {
+		super(id, nom, prenom, email, adresse, telephone, pseudo, mdp);
+		// TODO Auto-generated constructor stub
+	}
+
 
 	
-/*	public String creationConseiller(){
-		return null;
-		
-	}
-	
-	public void supprimerConseiller(conseiller){
-		
-	}
-	
-	public String reaffectationClient(client, conseiller){
-		return null;
-			
-	}
-	
-	public String affectationDemandeOuverture(demande, conseiller){
-		return null;
-		
-	}
-	*/
-	
-	
-
 }

@@ -25,6 +25,7 @@ public class DemandeOuverture {
 	private int id;
 	private String clientPotentiel; 
 	private boolean valide;
+	
 	@ManyToOne
 	private Conseiller conseiller; 
 	
