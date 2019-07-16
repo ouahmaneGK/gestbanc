@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 import com.wha.spring.idao.ClientDao;
 import com.wha.spring.model.Client;
 
-
 @Repository("clientDao")
 @Transactional
 public class ClientDaoImpl extends AbstractDao implements ClientDao {
@@ -32,7 +31,7 @@ public class ClientDaoImpl extends AbstractDao implements ClientDao {
 	}
 
 	public List<Client> findAllClients() {
-		return em.createQuery("From Clients").getResultList();
+		return em.createQuery("From User").getResultList();
 	}
 
 }

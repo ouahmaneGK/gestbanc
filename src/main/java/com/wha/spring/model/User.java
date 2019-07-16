@@ -30,6 +30,8 @@ import lombok.Setter;
 @Table(name = "User")
 public class User implements Serializable{
 
+	
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
