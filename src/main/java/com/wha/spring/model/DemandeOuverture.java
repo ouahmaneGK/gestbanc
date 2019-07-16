@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
@@ -23,8 +24,9 @@ public class DemandeOuverture {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String clientPotentiel; 
-	private boolean valide; 
-	private List<Conseiller> conseiller; 
+	private boolean valide;
+	@ManyToOne
+	private Conseiller conseiller; 
 	
 	@OneToOne(mappedBy="demandeOuverture")
 	private ClientPotentiel clientpotentiel;

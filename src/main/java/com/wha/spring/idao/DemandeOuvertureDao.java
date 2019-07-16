@@ -8,9 +8,9 @@ public interface DemandeOuvertureDao {
 	
 	DemandeOuverture saveDemandeOuverture(DemandeOuverture demandeOuverture);
 
-	void updateUser(DemandeOuverture demande);
+	void updateDemandeOuverture(DemandeOuverture demande);
 
-	public List<DemandeOuverture> findAllDemandes();
+	public List<DemandeOuverture> findAllDemandeOuvertures();
 
 	DemandeOuverture findById(int id);
 

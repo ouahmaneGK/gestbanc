@@ -7,11 +7,11 @@ import com.wha.spring.model.DemandeOuverture;
 
 public interface DemandeOuvertureService{
 	
-	DemandeOuverture saveUser(DemandeOuverture demandeOuverture);
+	DemandeOuverture saveDemandeOuverture(DemandeOuverture demandeOuverture);
 
 	DemandeOuverture findById(int id);
 
-	void DemandeOuverture(DemandeOuverture demandeOuverture);
+	void updateDemandeOuverture(DemandeOuverture demandeOuverture);
 
 	public List<DemandeOuverture> findAllDemandeOuvertures();
 

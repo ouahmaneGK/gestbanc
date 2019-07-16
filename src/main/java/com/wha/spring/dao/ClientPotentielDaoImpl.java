@@ -2,15 +2,20 @@ package com.wha.spring.dao;
 
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.wha.spring.idao.ClientPotentielDao;
 import com.wha.spring.model.ClientPotentiel;
 
-public class ClientPotentielDaoImpl implements ClientPotentielDao {
+@Repository("clientPotentielDao")
+@Transactional
+public class ClientPotentielDaoImpl extends AbstractDao implements ClientPotentielDao {
 
 	@Override
 	public ClientPotentiel saveClientPotentiel(ClientPotentiel clientpotentiel) {
-		// TODO Auto-generated method stub
-		return null;
+		em.persist(clientpotentiel);
+		return clientpotentiel;
 	}
 
 	@Override
@@ -21,8 +26,7 @@ public class ClientPotentielDaoImpl implements ClientPotentielDao {
 
 	@Override
 	public List<ClientPotentiel> findAllClientPotentiels() {
-		// TODO Auto-generated method stub
-		return null;
+		return em.createQuery("From ClientPotentiel").getResultList();
 	}
 
 	@Override
