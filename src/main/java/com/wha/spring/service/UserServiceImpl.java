@@ -20,7 +20,6 @@ public class UserServiceImpl implements UserService {
 	public User saveUser(User user) {
 		userDAO.saveUser(user);
 		return user;
-
 	}
 
 	public void updateUser(User user) {
@@ -32,7 +31,6 @@ public class UserServiceImpl implements UserService {
 	}
 
 	public void deleteUser(int id) {
-		// TODO Auto-generated method stub
 		userDAO.deleteUser(id);
 	}
 
