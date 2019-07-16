@@ -25,7 +25,7 @@ public class Compte {
 	private int id;
 
 	@Column(name = "NUMEROCOMPTE", nullable = false)
-	private int numeroDeCompte;
+	private String numeroDeCompte;
 	
 	@Column(name = "RIB", nullable = false)
 	private String RIB;
