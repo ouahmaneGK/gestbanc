@@ -19,6 +19,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+
 @DiscriminatorValue("ADMINISTRATEUR")
 public class Administrateur extends User {
 	
@@ -27,26 +28,28 @@ public class Administrateur extends User {
 	private List<Conseiller> conseillers;
 	@OneToMany
 	private  List<DemandeOuverture> demandeOuverture;
+
+
 	
-//	public String creationConseiller(){
-//		return listeConseillers;
-//		
-//	}
-//	
-//	public void supprimerConseiller(){
-//		
-//	}
-//	
-//	public String reaffectationClient(){
-//		return ;
-//			
-//	}
-//	
-//	public String affectationDemandeOuverture(){
-//		return ;
-//		
-//	}
+/*	public String creationConseiller(){
+		return null;
+		
+	}
 	
+	public void supprimerConseiller(conseiller){
+		
+	}
+	
+	public String reaffectationClient(client, conseiller){
+		return null;
+			
+	}
+	
+	public String affectationDemandeOuverture(demande, conseiller){
+		return null;
+		
+	}
+	*/
 	
 	
 
