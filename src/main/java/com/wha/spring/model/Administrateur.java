@@ -30,7 +30,9 @@ public class Administrateur extends User {
 	@OneToMany(mappedBy="administrateur")
 	private List<Conseiller> conseillers;
 
+
 	@JsonIgnore
+
 	@OneToMany
 	private  List<DemandeOuverture> demandeOuverture;
 

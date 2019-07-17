@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -28,7 +29,7 @@ public class Client extends User {
 	@Column(name = "REVENUMENS", nullable = true)
 	private double revenuMens;
 	
-	@OneToOne(mappedBy="client")
+	@ManyToOne
 	private Conseiller conseiller;
 	
 	@Builder
