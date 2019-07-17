@@ -24,13 +24,11 @@ public class UserController {
 	UserService userService;
 
 	@RequestMapping(value = "/create/dummy", method = RequestMethod.GET)
-	public void dummy() {
+	public User dummy() {
 		User u1 = new User(0, "Jemal Ahmed", "Ahmed.Jemal", "jmlhmd@gmail.com", null, null, null, null);
-		User u2 = new User(0, "Leanne Graham", "Bret", "Sincere@april.biz", null, null, null, null);
-		User u3 = new User(0, "Clementina DuBuque", "Moriah.Stanton", "Rey.Padberg@karina.biz", null, null, null, null);
 		userService.saveUser(u1);
-		userService.saveUser(u2);
-		userService.saveUser(u3);
+		return u1;
+	
 	}
 	//@CrossOrigin(origins = "http://localhost:4200")
 	@RequestMapping(value = "/get/all", method = RequestMethod.GET)

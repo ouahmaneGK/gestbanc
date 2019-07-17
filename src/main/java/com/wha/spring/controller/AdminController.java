@@ -1,17 +1,58 @@
 package com.wha.spring.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wha.spring.iservice.UserService;
+import com.wha.spring.iservice.AdminService;
+import com.wha.spring.model.Administrateur;
 
-/*@RestController
+
+
+@RestController
 @RequestMapping("administrateurs")
 public class AdminController {
 	
 	@Autowired
 	AdminService adminService;
+	
+	@RequestMapping(value = "/create/dummy", method = RequestMethod.GET)
+	public Administrateur dummy() {
+		Administrateur a1 = new Administrateur(null, null);
+		adminService.saveAdministrateur(a1);
+		return a1;
+	}
+	
+	//@CrossOrigin(origins = "http://localhost:4200")
+	@RequestMapping(value = "/get/all", method = RequestMethod.GET)
+	public ResponseEntity<List<Administrateur>> getAll() {
+		List<Administrateur> resultat = adminService.findAllAdministrateurs();
+		System.out.println("resultat "+resultat);
+		return new ResponseEntity<List<Administrateur>>(resultat, HttpStatus.OK);
+	}
+
+	//@CrossOrigin(origins = "http://localhost:4200")
+	@PostMapping("/create")
+	public Administrateur createAdministrateur(@RequestBody Administrateur administrateur) {
+		Administrateur newAdmin = adminService.saveAdministrateur(administrateur);
+		return newAdmin;
+	}
+
+
+	//@CrossOrigin(origins = "http://localhost:4200")
+	@PutMapping("/update")
+	public Administrateur updateUser(@RequestBody Administrateur administrateur) {
+		adminService.updateAdministrateur(administrateur);
+		return administrateur;
+	}
+
 
 }
-*/

@@ -19,8 +19,8 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
 		return user;
 	}
 
-	public void updateUser(User employee) {
-		em.merge(employee);
+	public void updateUser(User user) {
+		em.merge(user);
 	}
 
 	public void deleteUser(int id) {
