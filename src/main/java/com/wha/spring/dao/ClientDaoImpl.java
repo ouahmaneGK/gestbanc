@@ -31,7 +31,7 @@ public class ClientDaoImpl extends AbstractDao implements ClientDao {
 	}
 
 	public List<Client> findAllClients() {
-		return em.createQuery("From User").getResultList();
+		return em.createQuery("From Client").getResultList();
 	}
 
 }

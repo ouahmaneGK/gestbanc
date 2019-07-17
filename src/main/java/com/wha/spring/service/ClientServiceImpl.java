@@ -26,10 +26,6 @@ public class ClientServiceImpl implements ClientService {
 		clientDAO.updateClient(client);
 	}
 
-	public List<Client> findAllClients() {
-		return clientDAO.findAllClients();
-	}
-
 	public void deleteClient(int id) {
 		clientDAO.deleteClient(id);
 	}
@@ -37,6 +33,12 @@ public class ClientServiceImpl implements ClientService {
 	public Client findById(int id) {
 		return clientDAO.findById(id);
 	}
+	
+	public List<Client> findAllClients() {
+		return clientDAO.findAllClients();
+	}
+
+	
 
 }
 

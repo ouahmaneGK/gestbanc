@@ -39,7 +39,6 @@ public class Client extends User {
 		this.conseiller = conseiller;
 	}
 	
-	
 	/*@OneToMany
 	private List <Compte> listeComptes [];
 	private String piecesJustif;*/

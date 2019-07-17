@@ -29,8 +29,6 @@ import lombok.Setter;
 @DiscriminatorValue("TypeUser")
 @Table(name = "User")
 public class User implements Serializable{
-
-	
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -56,6 +54,5 @@ public class User implements Serializable{
 	
 	@Column(name = "MDP" )
 	private String mdp;
-
 	
 }
