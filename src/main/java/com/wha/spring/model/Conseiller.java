@@ -1,5 +1,6 @@
 package com.wha.spring.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -14,7 +15,10 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -27,22 +31,61 @@ import lombok.Setter;
 @DiscriminatorValue("CONSEILLER")
 public class Conseiller extends User{
 
-	@Column(nullable=true, unique=true)
+	@Column(nullable=true, unique=false)
 	private String matricule;
 	
 	 @OneToMany
-	 private List<Client> listeClients ;
+	 @JsonIgnore 
+	 private List<Client> listeClients = new ArrayList<Client>();
 	
-	 @OneToOne
-	 private Client client;
+	
 	 //@OneToMany
 	 //private List <DemandesClient> listDemandesClient;
 	
 	 @OneToMany
-	 private List <DemandeOuverture> listeDemandeOuvertureAValider;
+	 @JsonIgnore
+	 private List <DemandeOuverture> listeDemandeOuvertureAValider = new ArrayList<DemandeOuverture>();
 	@ManyToOne
 	@JoinColumn(name="id_admin")
 	private  Administrateur administrateur;
+	
+	
+	
+	@Builder
+	public Conseiller(int id, String nom, String prenom, String email,
+			String adresse, String telephone, String pseudo, String mdp) {
+		super(id, nom, prenom, email, adresse, telephone, pseudo, mdp);
+		
+		this.matricule= matricule;
+	
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	/*public void modificationDecouvert(){
 		
 		

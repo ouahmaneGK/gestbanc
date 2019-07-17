@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -44,6 +45,9 @@ public class Compte {
 	
 	@Column(name = "MONTANTREMUNERATION", nullable = false)
 	private double  montantRemuneration;
+	
+	@ManyToOne()
+	private Client  client;
 	
 	/*@OneToMany
 	private List <Transaction> listeTransactions [];

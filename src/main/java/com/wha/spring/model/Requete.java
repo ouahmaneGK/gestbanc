@@ -2,6 +2,8 @@ package com.wha.spring.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -32,7 +34,8 @@ public class Requete {
 	@Column(name = "MESSAGE", nullable = false)
 	private String message;
 	
-	@Column(name = "TYPE", nullable = false)
-	private String type;
+	@Enumerated(EnumType.STRING)
+	
+	private TypeRequete type;
 
 }

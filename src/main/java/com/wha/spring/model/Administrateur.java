@@ -26,6 +26,9 @@ public class Administrateur extends User {
 	
 	@OneToMany(mappedBy="administrateur")
 	private List<Conseiller> conseillers;
+	
+	
+	
 	@OneToMany
 	private  List<DemandeOuverture> demandeOuverture;
 
