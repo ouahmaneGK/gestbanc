@@ -17,6 +17,8 @@ public interface ClientDao {
 	
 	public List<Client> findAllClients();
 
+	//void modifDecouvert(int idCompte, int montant);
+
 }
 
 

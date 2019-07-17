@@ -25,10 +25,6 @@ public class CompteServiceImpl implements CompteService{
 		compteDAO.updateCompte(compte);
 	}
 
-	public List<Compte> findAllComptes() {
-		return compteDAO.findAllComptes();
-	}
-
 	public void deleteCompte(int id) {
 		compteDAO.deleteCompte(id);
 	}
@@ -36,5 +32,14 @@ public class CompteServiceImpl implements CompteService{
 	public Compte findById(int id) {
 		return compteDAO.findById(id);
 	}
+	
+	public List<Compte> findAllComptes() {
+		return compteDAO.findAllComptes();
+	}
+
+	/*@Override
+	public void modifDecouvert(int idCompte, int montant) {
+		compteDAO.modifDecouvert(idCompte, montant);	
+	}*/
 
 }

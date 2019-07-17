@@ -11,7 +11,7 @@ import com.wha.spring.model.Client;
 
 @Repository("clientDao")
 @Transactional
-public class ClientDaoImpl extends AbstractDao implements ClientDao {
+public abstract class ClientDaoImpl extends AbstractDao implements ClientDao {
 	
 	public Client saveClient(Client client) {
 		em.persist(client);
@@ -33,7 +33,7 @@ public class ClientDaoImpl extends AbstractDao implements ClientDao {
 	public List<Client> findAllClients() {
 		return em.createQuery("From Client").getResultList();
 	}
-
+	
 }
 
 

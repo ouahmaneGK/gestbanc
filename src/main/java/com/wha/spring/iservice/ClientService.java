@@ -15,4 +15,6 @@ public interface ClientService {
 	Client findById(int id);
 	
 	public List<Client> findAllClients();
+
+	//void modifDecouvert(int idCompte, int montant);
 }
