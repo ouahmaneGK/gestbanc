@@ -32,5 +32,6 @@ public class DemandeOuverture {
 	@OneToOne(mappedBy="demandeOuverture")
 	private ClientPotentiel clientpotentiel;
 	
-
+	@ManyToOne
+	private Administrateur administrateur; 
 }

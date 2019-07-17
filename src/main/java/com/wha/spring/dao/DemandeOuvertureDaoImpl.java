@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.wha.spring.idao.DemandeOuvertureDao;
+import com.wha.spring.model.Conseiller;
 import com.wha.spring.model.DemandeOuverture;
 import com.wha.spring.model.User;
 
@@ -40,6 +41,13 @@ public class DemandeOuvertureDaoImpl extends AbstractDao implements DemandeOuver
 	public void deleteDemandeOuverture(int id) {
 		em.remove(findById(id));
 
+	}
+	
+	@Override
+	public void affectationDemandeOuverture(DemandeOuverture demandeOuverture,
+			Conseiller conseiller) {
+		demandeOuverture.setConseiller(conseiller);
+		em.merge(demandeOuverture);
 	}
 
 }

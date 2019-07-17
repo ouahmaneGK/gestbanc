@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import com.wha.spring.model.Client;
+import com.wha.spring.model.Conseiller;
 
 public interface ClientDao {
 		
@@ -16,6 +17,8 @@ public interface ClientDao {
 	Client findById(int id);
 	
 	public List<Client> findAllClients();
+
+	void reaffectationClient(Client client, Conseiller conseiller);
 
 }
 

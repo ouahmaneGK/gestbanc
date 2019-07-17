@@ -31,32 +31,31 @@ import lombok.Setter;
 @DiscriminatorValue("CONSEILLER")
 public class Conseiller extends User{
 
-	@Column(nullable=true, unique=false)
-	private String matricule;
+	  	@Column(nullable = true, unique = true)
+	    private String matricule;
+
+	    @OneToMany(mappedBy = "conseiller")
+	    @JsonIgnore
+	    private List<Client> listeClients;
+
+	    // @OneToMany
+	    // private List <DemandesClient> listDemandesClient;
+
+	    @OneToMany(mappedBy = "conseiller")
+	    @JsonIgnore
+	    private List<DemandeOuverture> listeDemandeOuvertureAValider;
+
+	    @ManyToOne
+	    @JsonIgnore
+	    private Administrateur administrateur;	
 	
-	 @OneToMany
-	 @JsonIgnore 
-	 private List<Client> listeClients = new ArrayList<Client>();
 	
-	
-	 //@OneToMany
-	 //private List <DemandesClient> listDemandesClient;
-	
-	 @OneToMany
-	 @JsonIgnore
-	 private List <DemandeOuverture> listeDemandeOuvertureAValider = new ArrayList<DemandeOuverture>();
-	@ManyToOne
-	@JoinColumn(name="id_admin")
-	private  Administrateur administrateur;
-	
-	
-	
-	@Builder
-	public Conseiller(int id, String nom, String prenom, String email,
-			String adresse, String telephone, String pseudo, String mdp) {
-		super(id, nom, prenom, email, adresse, telephone, pseudo, mdp);
-		
-		this.matricule= matricule;
+		@Builder
+		public Conseiller(int id, String nom, String prenom, String email,
+				String adresse, String telephone, String pseudo, String mdp) {
+			super(id, nom, prenom, email, adresse, telephone, pseudo, mdp);
+			
+			this.matricule= matricule;
 	
 		
 	}

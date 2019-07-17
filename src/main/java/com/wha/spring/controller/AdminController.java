@@ -15,7 +15,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.wha.spring.iservice.AdminService;
+import com.wha.spring.iservice.ClientService;
+import com.wha.spring.iservice.ConseillerService;
 import com.wha.spring.model.Administrateur;
+import com.wha.spring.model.Client;
 import com.wha.spring.model.Conseiller;
 
 
@@ -26,6 +29,11 @@ public class AdminController {
 	
 	@Autowired
 	AdminService adminService;
+	
+	@Autowired
+	ConseillerService conseillerService;
+	@Autowired
+	ClientService clientService;
 	
 	@RequestMapping(value = "/create/dummy", method = RequestMethod.GET)
 	public Administrateur dummy() {
@@ -67,5 +75,13 @@ public class AdminController {
 		adminService.deleteAdministrateur(idAdmin);
 	}
 	
+	
+	@PutMapping("/reaffectation/{idConseiller}/{idClient}")
+	public void reaffectationClient(@PathVariable int idConseiller, @PathVariable int idClient) {
+		Conseiller newConseiller = conseillerService.findById(idConseiller);
+		Client client = clientService.findById(idClient);
+		clientService.reaffectationClient(client, newConseiller);
+	}
 
 }
+

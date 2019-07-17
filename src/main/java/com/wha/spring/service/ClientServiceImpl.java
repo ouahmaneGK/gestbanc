@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.wha.spring.idao.ClientDao;
 import com.wha.spring.iservice.ClientService;
 import com.wha.spring.model.Client;
+import com.wha.spring.model.Conseiller;
 
 @Service("clientService")
 @Transactional
@@ -36,6 +37,13 @@ public class ClientServiceImpl implements ClientService {
 	
 	public List<Client> findAllClients() {
 		return clientDAO.findAllClients();
+	}
+
+	@Override
+	public void reaffectationClient(Client client, Conseiller conseiller) {
+		clientDAO.reaffectationClient(client, conseiller);
+		
+		
 	}
 
 	

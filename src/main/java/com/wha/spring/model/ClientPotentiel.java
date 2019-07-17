@@ -29,7 +29,7 @@ public class ClientPotentiel {
 	private int revenuMens;
 	private String piecesJustif;
 	
-	@OneToOne(cascade= {CascadeType.PERSIST})
+	@OneToOne(cascade=CascadeType.ALL)
 	private DemandeOuverture demandeOuverture;
 
 }

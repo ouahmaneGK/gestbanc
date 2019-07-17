@@ -9,14 +9,9 @@ import com.wha.spring.model.DemandeOuverture;
 
 public interface AdminDao {
 
-//	Conseiller creationConseiller(Conseiller conseiller);
-//
-//	void supprimerConseiller(Conseiller conseiller);
-
-	void reaffectationClient(Client client, Conseiller conseiller);
-
-	String affectationDemandeOuverture(DemandeOuverture demandeOuverture,
-			Conseiller conseiller);
+	// Conseiller creationConseiller(Conseiller conseiller);
+	//
+	// void supprimerConseiller(Conseiller conseiller);
 
 	Administrateur saveAdministrateur(Administrateur administrateur);
 
@@ -27,8 +22,5 @@ public interface AdminDao {
 	List<Administrateur> findAllAdministrateurs();
 
 	void deleteAdministrateur(int id);
-	
-	
-	
 
 }

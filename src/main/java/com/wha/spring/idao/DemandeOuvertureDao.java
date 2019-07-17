@@ -2,6 +2,7 @@ package com.wha.spring.idao;
 
 import java.util.List;
 
+import com.wha.spring.model.Conseiller;
 import com.wha.spring.model.DemandeOuverture;
 
 public interface DemandeOuvertureDao {
@@ -15,5 +16,8 @@ public interface DemandeOuvertureDao {
 	DemandeOuverture findById(int id);
 
 	void deleteDemandeOuverture(int id);
+
+	void affectationDemandeOuverture(DemandeOuverture demande,
+			Conseiller conseiller);
 
 }

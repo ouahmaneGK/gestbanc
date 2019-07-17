@@ -35,11 +35,6 @@ public class ConseillerController {
 	@RequestMapping(value = "/createconseiller", method = RequestMethod.GET) // ca marche!!
 	public Conseiller dummy() {
 		Conseiller c1 = new Conseiller(0, "Léo222", "Léo222", "leo222@sfr.fr", "chez lui dans 222 69100", "222221", "le con", "2222");
-		
-		/*Conseiller c2 = new User(0, "Leanne Graham", "Bret", "Sincere@april.biz", null, null, null, null);
-		Conseiller c3 = new User(0, "Clementina DuBuque", "Moriah.Stanton", "Rey.Padberg@karina.biz", null, null, null, null);
-		conseillerService.saveConseiller(c1);
-		conseillerService.saveConseiller(c2);*/
 		conseillerService.saveConseiller(c1);
 		return c1;
 	}

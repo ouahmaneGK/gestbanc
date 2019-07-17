@@ -24,18 +24,7 @@ public class AdminDaoImpl extends AbstractDao implements AdminDao {
 		
 	}*/
 
-	@Override
-	public void reaffectationClient(Client client, Conseiller conseiller) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public String affectationDemandeOuverture(DemandeOuverture demande,
-			Conseiller conseiller) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 	@Override
 	public Administrateur saveAdministrateur(Administrateur administrateur) {
