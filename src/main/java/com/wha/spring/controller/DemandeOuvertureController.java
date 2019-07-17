@@ -22,13 +22,12 @@ public class DemandeOuvertureController {
 	@Autowired
 	DemandeOuvertureService demandeOuvertureService;
 	
-	@RequestMapping(value = "/create/dummy", method = RequestMethod.GET)
-<<<<<<< HEAD
+	/*@RequestMapping(value = "/create/dummy", method = RequestMethod.GET)
 	public DemandeOuverture dummy() {
 		DemandeOuverture d1 = new DemandeOuverture(0, "Premiere demande", true,null, null);
 		demandeOuvertureService.saveDemandeOuverture(d1);
 		return d1;
-=======
+}*/
 	public void demandes() {
 //		DemandeOuverture d1 = new DemandeOuverture(0, "Premiere demande", true,null, null);
 //		DemandeOuverture d2 = new DemandeOuverture(0, "Deuxième demande", false,null, null);
@@ -36,7 +35,6 @@ public class DemandeOuvertureController {
 //		demandeOuvertureService.saveDemandeOuverture(d1);
 //		demandeOuvertureService.saveDemandeOuverture(d2);
 //		demandeOuvertureService.saveDemandeOuverture(d3);
->>>>>>> Client
 	}
 	
 	//@CrossOrigin(origins = "http://localhost:4200")
@@ -59,6 +57,4 @@ public class DemandeOuvertureController {
 		demandeOuvertureService.updateDemandeOuverture(demandeOuverture);
 		return demandeOuverture;
 	}
-	
-
 }

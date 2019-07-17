@@ -29,103 +29,29 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @DiscriminatorValue("CONSEILLER")
-public class Conseiller extends User{
+public class Conseiller extends User {
 
-	@Column(nullable=true, unique=false)
+	@Column(nullable = true, unique = false)
 	private String matricule;
-	
-<<<<<<< HEAD
-	 @OneToMany
-	 @JsonIgnore 
-	 private List<Client> listeClients = new ArrayList<Client>();
-	
-=======
-	 @OneToMany(mappedBy="conseiller")
-	 private List<Client> listeClients ;
->>>>>>> Client
-	
-	 //@OneToMany
-	 //private List <DemandesClient> listDemandesClient;
-	
-<<<<<<< HEAD
-	 @OneToMany
-	 @JsonIgnore
-	 private List <DemandeOuverture> listeDemandeOuvertureAValider = new ArrayList<DemandeOuverture>();
+
+	@JsonIgnore
+	@OneToMany(mappedBy = "conseiller")
+	private List<Client> listeClients;
+
+	// @OneToMany
+	// private List <DemandesClient> listDemandesClient;
+
+	@JsonIgnore
+	@OneToMany(mappedBy = "conseiller")
+	private List<DemandeOuverture> listeDemandeOuvertureAValider;
+
 	@ManyToOne
-	@JoinColumn(name="id_admin")
-=======
-	 @OneToMany(mappedBy="conseiller")
-	 private List <DemandeOuverture> listeDemandeOuvertureAValider;
-	
-	 @ManyToOne
->>>>>>> Client
-	private  Administrateur administrateur;
-	
-	
-	
+	private Administrateur administrateur;
+
 	@Builder
-	public Conseiller(int id, String nom, String prenom, String email,
-			String adresse, String telephone, String pseudo, String mdp) {
+	public Conseiller(int id, String nom, String prenom, String email, String adresse, String telephone, String pseudo, String mdp) {
 		super(id, nom, prenom, email, adresse, telephone, pseudo, mdp);
-		
-		this.matricule= matricule;
-	
-		
+		this.matricule = matricule;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/*public void modificationDecouvert(){
-		
-		
-	}
-	
-	public void modificationReminiration(){
-		
-	}
-	
-   public void validerDemandeChequier(){
-	   
-   }
-   
-   public void validationDemandeOuverture(){
-	   
-   }
-   
-   public void gelerCompte(){
-	   
-   }
-   public void rechercheParClient(){
-	   
-   }
-   public void rechercheParCompte(){
-	   
-   }
-   public void afficheDetail(){
-	   
-   }*/
-   
+
 }

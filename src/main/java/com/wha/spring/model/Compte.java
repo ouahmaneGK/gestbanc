@@ -8,10 +8,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-<<<<<<< HEAD
-=======
+
 import javax.persistence.OneToMany;
->>>>>>> Client
+
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -52,21 +51,13 @@ public class Compte {
 	@Column(name = "MONTANTREMUNERATION", nullable = false)
 	private double  montantRemuneration;
 	
-<<<<<<< HEAD
-	@ManyToOne()
+	/*@ManyToOne()
 	private Client  client;
 	
-	/*@OneToMany
-	private List <Transaction> listeTransactions [];
-=======
-	@ManyToOne
-	private Client client;
-	/*
->>>>>>> Client
 	@OneToMany
-	private List <Transaction> listeTransactions [];
+	private List <Transaction> listeTransactions;
 	
-	/*@OneToMany
-	private List <Notification> listeNotifications [];*/
+	@OneToMany
+	private List <Notification> listeNotifications;*/
 
 }

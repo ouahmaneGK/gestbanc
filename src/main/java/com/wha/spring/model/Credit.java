@@ -8,8 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import com.wha.spring.model.Client.ClientBuilder;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -22,7 +20,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @DiscriminatorValue("Credit")
 public class Credit extends Transaction {
-	
 	
 	@Builder
 	public Credit(int id, int montant, Compte compte, String libelle, Date date){
