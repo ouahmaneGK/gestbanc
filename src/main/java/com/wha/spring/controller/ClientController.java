@@ -24,11 +24,11 @@ public class ClientController {
 	@Autowired
 	ClientService clientService;
 
-	@RequestMapping(value = "/create/nerd", method = RequestMethod.GET)
+	/*@RequestMapping(value = "/create/nerd", method = RequestMethod.GET)
 	public void nerd() {
 		Client c1 = new Client("Hill", "Benny", "b.hill@hotmail.fr", "2 rue Nain 59100 Roubaix", "0621222324", "bhill", "bh", 1500, null);
 		clientService.saveClient(c1);
-	}
+	}*/
 
 	//@CrossOrigin(origins = "http://localhost:4200")
 	@PostMapping("/create")

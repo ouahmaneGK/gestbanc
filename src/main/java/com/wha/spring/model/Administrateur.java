@@ -29,11 +29,16 @@ public class Administrateur extends User {
 	@JsonIgnore
 	@OneToMany(mappedBy="administrateur")
 	private List<Conseiller> conseillers;
+<<<<<<< HEAD
 
 
 	@JsonIgnore
 
 	@OneToMany
+=======
+	
+	@OneToMany(mappedBy="administrateur")
+>>>>>>> Client
 	private  List<DemandeOuverture> demandeOuverture;
 
 

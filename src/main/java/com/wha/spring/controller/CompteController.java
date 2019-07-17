@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.wha.spring.iservice.CompteService;
 import com.wha.spring.model.Compte;
 
+
+
 @RestController
 @RequestMapping("comptes")
 public class CompteController {
@@ -25,7 +27,11 @@ public class CompteController {
 	@Autowired
 	CompteService compteService;
 
+<<<<<<< HEAD
 /*	@RequestMapping(value = "/create/trump", method = RequestMethod.GET)
+=======
+	/*@RequestMapping(value = "/create/trump", method = RequestMethod.GET)
+>>>>>>> Client
 	public void trump() {
 		Compte cpte1 = new Compte(0, "03020306091", "00030200123010235489510", 251, 1500, 42, 5000,1);
 		compteService.saveCompte(cpte1);

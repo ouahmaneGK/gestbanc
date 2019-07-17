@@ -34,19 +34,31 @@ public class Conseiller extends User{
 	@Column(nullable=true, unique=false)
 	private String matricule;
 	
+<<<<<<< HEAD
 	 @OneToMany
 	 @JsonIgnore 
 	 private List<Client> listeClients = new ArrayList<Client>();
 	
+=======
+	 @OneToMany(mappedBy="conseiller")
+	 private List<Client> listeClients ;
+>>>>>>> Client
 	
 	 //@OneToMany
 	 //private List <DemandesClient> listDemandesClient;
 	
+<<<<<<< HEAD
 	 @OneToMany
 	 @JsonIgnore
 	 private List <DemandeOuverture> listeDemandeOuvertureAValider = new ArrayList<DemandeOuverture>();
 	@ManyToOne
 	@JoinColumn(name="id_admin")
+=======
+	 @OneToMany(mappedBy="conseiller")
+	 private List <DemandeOuverture> listeDemandeOuvertureAValider;
+	
+	 @ManyToOne
+>>>>>>> Client
 	private  Administrateur administrateur;
 	
 	

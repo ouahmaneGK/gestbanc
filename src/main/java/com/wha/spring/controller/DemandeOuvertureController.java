@@ -23,10 +23,20 @@ public class DemandeOuvertureController {
 	DemandeOuvertureService demandeOuvertureService;
 	
 	@RequestMapping(value = "/create/dummy", method = RequestMethod.GET)
+<<<<<<< HEAD
 	public DemandeOuverture dummy() {
 		DemandeOuverture d1 = new DemandeOuverture(0, "Premiere demande", true,null, null);
 		demandeOuvertureService.saveDemandeOuverture(d1);
 		return d1;
+=======
+	public void demandes() {
+//		DemandeOuverture d1 = new DemandeOuverture(0, "Premiere demande", true,null, null);
+//		DemandeOuverture d2 = new DemandeOuverture(0, "Deuxième demande", false,null, null);
+//		DemandeOuverture d3 = new DemandeOuverture(0, "Troisieme demande ", true,null, null);
+//		demandeOuvertureService.saveDemandeOuverture(d1);
+//		demandeOuvertureService.saveDemandeOuverture(d2);
+//		demandeOuvertureService.saveDemandeOuverture(d3);
+>>>>>>> Client
 	}
 	
 	//@CrossOrigin(origins = "http://localhost:4200")
