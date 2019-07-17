@@ -1,5 +1,4 @@
 package com.wha.spring.test;
-
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.junit.Assert.assertThat;
 
@@ -15,24 +14,20 @@ import org.springframework.transaction.annotation.Transactional;
 import com.wha.spring.config.JPAConfig;
 import com.wha.spring.config.WebConfig;
 import com.wha.spring.iservice.UserService;
-import com.wha.spring.model.User;
 
 @WebAppConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { WebConfig.class, JPAConfig.class })
 public class SaveUserTest {
-
-	@Autowired
-	UserService us;
-
-	@Test
-	@Transactional
-	@Rollback(true)
-	public void test() {
-		//assertThat(us, instanceOf(UserService.class));
-
-		//assertThat(us.findById(1), instanceOf(User.class));
-	}
-
-
+    @Autowired
+    UserService us;
+    
+    @Test
+    @Transactional
+    @Rollback(true)
+    public void test() {
+        assertThat(us, instanceOf(UserService.class));
+        //assertThat(us.findById(1), instanceOf(User.class));
+    }
 }
+

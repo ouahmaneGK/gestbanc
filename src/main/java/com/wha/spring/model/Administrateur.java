@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -24,19 +26,15 @@ import lombok.Setter;
 @DiscriminatorValue("ADMINISTRATEUR")
 public class Administrateur extends User {
 	
-	
+	@JsonIgnore
 	@OneToMany(mappedBy="administrateur")
 	private List<Conseiller> conseillers;
-	
+
+	@JsonIgnore
 	@OneToMany
 	private  List<DemandeOuverture> demandeOuverture;
 
-	@Builder
-	public Administrateur(int id, String nom, String prenom, String email,
-			String adresse, String telephone, String pseudo, String mdp) {
-		super(id, nom, prenom, email, adresse, telephone, pseudo, mdp);
-		// TODO Auto-generated constructor stub
-	}
+
 
 
 	
