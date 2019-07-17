@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.wha.spring.idao.ClientPotentielDao;
 import com.wha.spring.model.ClientPotentiel;
+import com.wha.spring.model.User;
 
 @Repository("clientPotentielDao")
 @Transactional
@@ -20,7 +21,7 @@ public class ClientPotentielDaoImpl extends AbstractDao implements ClientPotenti
 
 	@Override
 	public void updateClientPotentiel(ClientPotentiel clientpotentiel) {
-		// TODO Auto-generated method stub
+		em.merge(clientpotentiel);
 
 	}
 
@@ -31,13 +32,13 @@ public class ClientPotentielDaoImpl extends AbstractDao implements ClientPotenti
 
 	@Override
 	public ClientPotentiel findById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		// Appel de la méthod init de la class Logger
+				return (ClientPotentiel) em.find(ClientPotentiel.class, id);
 	}
 
 	@Override
 	public void deleteClientPotentiel(int id) {
-		// TODO Auto-generated method stub
+		em.remove(findById(id));
 
 	}
 

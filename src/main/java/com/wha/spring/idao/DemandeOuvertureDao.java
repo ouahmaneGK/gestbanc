@@ -8,7 +8,7 @@ public interface DemandeOuvertureDao {
 	
 	DemandeOuverture saveDemandeOuverture(DemandeOuverture demandeOuverture);
 
-	void updateDemandeOuverture(DemandeOuverture demande);
+	void updateDemandeOuverture(DemandeOuverture demandeOuverture);
 
 	public List<DemandeOuverture> findAllDemandeOuvertures();
 

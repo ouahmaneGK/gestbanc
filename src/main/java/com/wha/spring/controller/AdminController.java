@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.wha.spring.iservice.AdminService;
 import com.wha.spring.model.Administrateur;
+import com.wha.spring.model.Conseiller;
 
 
 
@@ -35,7 +38,6 @@ public class AdminController {
 	@RequestMapping(value = "/get/all", method = RequestMethod.GET)
 	public ResponseEntity<List<Administrateur>> getAll() {
 		List<Administrateur> resultat = adminService.findAllAdministrateurs();
-		System.out.println("resultat "+resultat);
 		return new ResponseEntity<List<Administrateur>>(resultat, HttpStatus.OK);
 	}
 
@@ -49,10 +51,21 @@ public class AdminController {
 
 	//@CrossOrigin(origins = "http://localhost:4200")
 	@PutMapping("/update")
-	public Administrateur updateUser(@RequestBody Administrateur administrateur) {
+	public Administrateur updateAdministrateur(@RequestBody Administrateur administrateur) {
 		adminService.updateAdministrateur(administrateur);
 		return administrateur;
 	}
+	
+	@RequestMapping("/get/{id}")
+	public Administrateur getById(@PathVariable int id){
+		return adminService.findById(id);
+	}
 
+	
+	@DeleteMapping("/delete/{idAdmin}")
+	public void deleteAdministrateur(@PathVariable int idAdmin) {
+		adminService.deleteAdministrateur(idAdmin);
+	}
+	
 
 }

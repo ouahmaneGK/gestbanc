@@ -25,7 +25,7 @@ public class ClientPotentielController  {
 	
 	
 	@RequestMapping(value = "/create/dummy", method = RequestMethod.GET)
-	public ClientPotentiel demandes() {
+	public ClientPotentiel dummy() {
 		ClientPotentiel c1 = new ClientPotentiel(0, "Jemal Ahmed", "Ahmed.Jemal", "jmlhmd@gmail.com", null, null, 0, null, null);
 		clientPotentielService.saveClientPotentiel(c1);
 		return c1;

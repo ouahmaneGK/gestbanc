@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.wha.spring.idao.DemandeOuvertureDao;
 import com.wha.spring.model.DemandeOuverture;
+import com.wha.spring.model.User;
 
 @Repository("demandeOuvertureDao")
 @Transactional
@@ -21,7 +22,7 @@ public class DemandeOuvertureDaoImpl extends AbstractDao implements DemandeOuver
 
 	@Override
 	public void updateDemandeOuverture(DemandeOuverture demandeOuverture) {
-		// TODO Auto-generated method stub
+		em.merge(demandeOuverture);
 
 	}
 
@@ -32,13 +33,12 @@ public class DemandeOuvertureDaoImpl extends AbstractDao implements DemandeOuver
 
 	@Override
 	public DemandeOuverture findById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return (DemandeOuverture) em.find(DemandeOuverture.class, id);
 	}
 
 	@Override
 	public void deleteDemandeOuverture(int id) {
-		// TODO Auto-generated method stub
+		em.remove(findById(id));
 
 	}
 

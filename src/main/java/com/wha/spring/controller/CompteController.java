@@ -25,11 +25,11 @@ public class CompteController {
 	@Autowired
 	CompteService compteService;
 
-	@RequestMapping(value = "/create/trump", method = RequestMethod.GET)
+/*	@RequestMapping(value = "/create/trump", method = RequestMethod.GET)
 	public void trump() {
 		Compte cpte1 = new Compte(0, "03020306091", "00030200123010235489510", 251, 1500, 42, 5000,1);
 		compteService.saveCompte(cpte1);
-	}
+	}*/
 
 	//@CrossOrigin(origins = "http://localhost:4200")
 	@PostMapping("/create")
