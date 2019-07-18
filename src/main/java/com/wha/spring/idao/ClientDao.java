@@ -1,6 +1,5 @@
 package com.wha.spring.idao;
 
-import java.io.Serializable;
 import java.util.List;
 
 import com.wha.spring.model.Client;
@@ -18,7 +17,11 @@ public interface ClientDao {
 	
 	public List<Client> findAllClients();
 
+
 	void reaffectationClient(Client client, Conseiller conseiller);
+
+	Client getByName(String nom);
+
 
 }
 

@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -40,8 +41,8 @@ public class Client extends User {
 		this.conseiller = conseiller;
 	}
 	
-	/*@OneToMany
-	private List <Compte> listeComptes [];
-	private String piecesJustif;*/
+	/*@OneToMany(mappedBy="client")
+	private List <Compte> listeComptes;*/
+	/*private String piecesJustif;*/
 	
 }

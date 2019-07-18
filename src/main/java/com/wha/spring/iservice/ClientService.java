@@ -15,7 +15,11 @@ public interface ClientService {
 
 	Client findById(int id);
 
-	public List<Client> findAllClients();
+	public List<Client> findAllClients(); 
+
 
 	void reaffectationClient(Client client, Conseiller conseiller);
+
+	Client getByName(String nom);
+
 }

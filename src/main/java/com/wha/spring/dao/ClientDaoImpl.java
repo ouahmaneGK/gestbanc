@@ -42,6 +42,11 @@ public class ClientDaoImpl extends AbstractDao implements ClientDao {
 
 	}
 
+	@Override
+	public Client getByName(String pNom) {
+		return   (Client) em.createQuery("from Client c where c.nom = :pNom").setParameter("pNom", pNom).getSingleResult();
+	}
+
 }
 
 
