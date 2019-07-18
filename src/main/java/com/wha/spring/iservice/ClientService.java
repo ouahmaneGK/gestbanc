@@ -3,6 +3,7 @@ package com.wha.spring.iservice;
 import java.util.List;
 
 import com.wha.spring.model.Client;
+import com.wha.spring.model.Conseiller;
 
 public interface ClientService {
 
@@ -15,4 +16,6 @@ public interface ClientService {
 	Client findById(int id);
 	
 	public List<Client> findAllClients();
+
+	Client getByName(String nom);
 }

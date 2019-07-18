@@ -17,6 +17,8 @@ public interface ClientDao {
 	
 	public List<Client> findAllClients();
 
+	Client getByName(String nom);
+
 }
 
 

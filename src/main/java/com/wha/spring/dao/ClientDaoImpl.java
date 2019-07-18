@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.wha.spring.idao.ClientDao;
 import com.wha.spring.model.Client;
+import com.wha.spring.model.Conseiller;
 
 @Repository("clientDao")
 @Transactional
@@ -32,6 +33,11 @@ public class ClientDaoImpl extends AbstractDao implements ClientDao {
 
 	public List<Client> findAllClients() {
 		return em.createQuery("From Client").getResultList();
+	}
+
+	@Override
+	public Client getByName(String pNom) {
+		return   (Client) em.createQuery("from Client c where c.nom = :pNom").setParameter("pNom", pNom).getSingleResult();
 	}
 
 }

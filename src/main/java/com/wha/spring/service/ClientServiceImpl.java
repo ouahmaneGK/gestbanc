@@ -38,6 +38,12 @@ public class ClientServiceImpl implements ClientService {
 		return clientDAO.findAllClients();
 	}
 
+	@Override
+	public Client getByName(String nom) {
+		return clientDAO.getByName(nom);
+		 
+	}
+
 	
 
 }
