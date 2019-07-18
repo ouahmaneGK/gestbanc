@@ -1,11 +1,16 @@
 package com.wha.spring.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+
+import javax.persistence.OneToMany;
+
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -46,12 +51,13 @@ public class Compte {
 	@Column(name = "MONTANTREMUNERATION", nullable = false)
 	private double  montantRemuneration;
 	
-	@ManyToOne()
+	/*@ManyToOne()
 	private Client  client;
 	
-	/*@OneToMany
-	private List <Transaction> listeTransactions [];
 	@OneToMany
-	private List <Notification> listeNotifications [];*/
+	private List <Transaction> listeTransactions;
+	
+	@OneToMany
+	private List <Notification> listeNotifications;*/
 
 }

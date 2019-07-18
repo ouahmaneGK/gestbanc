@@ -59,7 +59,6 @@ public class ConseillerController {
 		return conseiller;
 	}
 	
-	
 	@DeleteMapping("/delete/{conseilleId}")
 	public void deleteConseiller(@PathVariable int conseilleId) {
 		conseillerService.deleteConseiller(conseilleId);
@@ -69,16 +68,10 @@ public class ConseillerController {
 	public Conseiller getById(@PathVariable int id){
 		return conseillerService.findById(id);
 	}
-	
-	
+		
 	@RequestMapping("/name/{nom}")
 	public Conseiller rechercheParNom(@PathVariable  String nom){
-		
-		return  conseillerService.getByName(nom);
-		
+		return  conseillerService.getByName(nom);	
 	}
-	
-	
-	
 	
 }

@@ -12,7 +12,7 @@ import com.wha.spring.model.Conseiller;
 
 @Repository("clientDao")
 @Transactional
-public class ClientDaoImpl extends AbstractDao implements ClientDao {
+public abstract class ClientDaoImpl extends AbstractDao implements ClientDao {
 	
 	public Client saveClient(Client client) {
 		em.persist(client);
@@ -39,7 +39,6 @@ public class ClientDaoImpl extends AbstractDao implements ClientDao {
 	public void reaffectationClient(Client client, Conseiller conseiller) {
 		client.setConseiller(conseiller);
 		em.merge(client);
-
 	}
 
 }

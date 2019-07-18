@@ -16,21 +16,16 @@ import com.wha.spring.model.User;
 @Transactional
 public class AdminDaoImpl extends AbstractDao implements AdminDao {
 	
-	/*public String creationConseiller(){
-		
+	/*public String creationConseiller(){		
 	}
 	
-	public void supprimerConseiller(conseiller){
-		
+	public void supprimerConseiller(conseiller){		
 	}*/
-
-	
 
 	@Override
 	public Administrateur saveAdministrateur(Administrateur administrateur) {
 		em.persist(administrateur);
-		return administrateur; 
-		
+		return administrateur; 		
 	}
 
 	@Override
@@ -53,7 +48,5 @@ public class AdminDaoImpl extends AbstractDao implements AdminDao {
 	public List<Administrateur> findAllAdministrateurs() {
 		return em.createQuery("From Administrateur").getResultList();
 	}
-
-
-
+	
 }

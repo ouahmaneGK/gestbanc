@@ -1,6 +1,6 @@
 package com.wha.spring.idao;
 
-import java.io.Serializable;
+
 import java.util.List;
 
 import com.wha.spring.model.Client;
@@ -20,6 +20,8 @@ public interface ClientDao {
 
 	void reaffectationClient(Client client, Conseiller conseiller);
 
+	//void modifDecouvert(int idCompte, int montant);
+	
 }
 
 

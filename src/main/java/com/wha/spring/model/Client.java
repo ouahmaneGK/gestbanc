@@ -6,6 +6,9 @@ import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+
+import javax.persistence.OneToMany;
+
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -33,15 +36,13 @@ public class Client extends User {
 	private Conseiller conseiller;
 	
 	@Builder
-	public Client(String nom, String prenom, String email,
-			String adresse, String telephone, String pseudo, String mdp, double revenuMens, Conseiller conseiller) {
+	public Client(String nom, String prenom, String email, String adresse, String telephone, String pseudo, String mdp, double revenuMens, Conseiller conseiller) {
 		super(0, nom, prenom, email, adresse, telephone, pseudo, mdp);
 		this.revenuMens = revenuMens;
 		this.conseiller = conseiller;
 	}
 	
-	/*@OneToMany
-	private List <Compte> listeComptes [];
-	private String piecesJustif;*/
-	
+	/*@OneToMany(mappedBy = "client")
+	private List<Compte> listeComptes;
+	private String piecesJustif;*/	
 }

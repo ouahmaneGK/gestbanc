@@ -17,5 +17,9 @@ public interface ClientService {
 
 	public List<Client> findAllClients();
 
+
 	void reaffectationClient(Client client, Conseiller conseiller);
+
+	//void modifDecouvert(int idCompte, int montant);
+
 }

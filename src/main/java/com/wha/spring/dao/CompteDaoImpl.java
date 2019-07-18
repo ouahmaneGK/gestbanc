@@ -12,7 +12,7 @@ import com.wha.spring.model.User;
 
 @Repository("compteDao")
 @Transactional
-public class CompteDaoImpl extends AbstractDao implements CompteDao {
+public abstract class CompteDaoImpl extends AbstractDao implements CompteDao {
 	
 	public Compte saveCompte(Compte compte) {
 		em.persist(compte);

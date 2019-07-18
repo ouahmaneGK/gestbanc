@@ -41,12 +41,13 @@ public class ClientServiceImpl implements ClientService {
 
 	@Override
 	public void reaffectationClient(Client client, Conseiller conseiller) {
-		clientDAO.reaffectationClient(client, conseiller);
-		
-		
+		clientDAO.reaffectationClient(client, conseiller);		
 	}
 
-	
+	/*@Override
+	public void modifDecouvert(int idCompte, int montant) {
+		clientDAO.modifDecouvert(idCompte, montant);	
+	}*/
 
 }
 

@@ -29,7 +29,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @DiscriminatorValue("CONSEILLER")
-public class Conseiller extends User{
+public class Conseiller extends User {
 
 	  	@Column(nullable = true, unique = true)
 	    private String matricule;
@@ -57,62 +57,31 @@ public class Conseiller extends User{
 			
 			this.matricule= matricule;
 	
-		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/*public void modificationDecouvert(){
-		
-		
-	}
-	
-	public void modificationReminiration(){
-		
-	}
-	
-   public void validerDemandeChequier(){
-	   
-   }
-   
-   public void validationDemandeOuverture(){
-	   
-   }
-   
-   public void gelerCompte(){
-	   
-   }
-   public void rechercheParClient(){
-	   
-   }
-   public void rechercheParCompte(){
-	   
-   }
-   public void afficheDetail(){
-	   
-   }*/
-   
 }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+

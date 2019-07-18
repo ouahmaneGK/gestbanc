@@ -29,9 +29,10 @@ public class DemandeOuverture {
 	@ManyToOne
 	private Conseiller conseiller; 
 	
-	@OneToOne(mappedBy="demandeOuverture")
-	private ClientPotentiel clientpotentiel;
-	
 	@ManyToOne
 	private Administrateur administrateur; 
+	
+	@OneToOne(mappedBy="demandeOuverture")
+	private ClientPotentiel clientpotentiel;
+
 }
