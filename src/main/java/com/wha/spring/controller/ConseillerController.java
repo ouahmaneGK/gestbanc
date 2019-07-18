@@ -19,11 +19,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.wha.spring.iservice.ClientService;
+import com.wha.spring.iservice.ConseillerService;
+import com.wha.spring.model.Client;
+import com.wha.spring.model.Conseiller;
+
+/*import com.wha.spring.iservice.ClientService;
 import com.wha.spring.iservice.ConseillerService;
 import com.wha.spring.iservice.UserService;
+import com.wha.spring.model.Client;
 import com.wha.spring.model.Compte;
 import com.wha.spring.model.Conseiller;
-import com.wha.spring.model.User;
+import com.wha.spring.model.User;*/
 
 @RestController
 @RequestMapping("conseillers")
@@ -31,6 +38,8 @@ public class ConseillerController {
 
 	@Autowired
     ConseillerService conseillerService;
+	@Autowired
+	ClientService clientService;
 
 	@RequestMapping(value = "/createconseiller", method = RequestMethod.GET) // ca marche!!
 	public Conseiller dummy() {
@@ -74,4 +83,16 @@ public class ConseillerController {
 		return  conseillerService.getByName(nom);	
 	}
 	
+<<<<<<< HEAD
+=======
+	
+	// recherche un client par son nom////// Ca marche OK!!
+	
+	@RequestMapping("/clients/name/{nom}")
+	public Client getclientByName(@PathVariable  String nom){
+		
+		return  clientService.getByName(nom);
+		
+	}
+>>>>>>> 73ae4fb8b947c936ed8eafca31016fdf211b7920
 }

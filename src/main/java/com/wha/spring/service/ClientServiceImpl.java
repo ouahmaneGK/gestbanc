@@ -40,8 +40,20 @@ public class ClientServiceImpl implements ClientService {
 	}
 
 	@Override
+
 	public void reaffectationClient(Client client, Conseiller conseiller) {
+<<<<<<< HEAD
 		clientDAO.reaffectationClient(client, conseiller);		
+=======
+		clientDAO.reaffectationClient(client, conseiller);
+		
+	}	
+
+	public Client getByName(String nom) { 
+		return clientDAO.getByName(nom);
+		 
+
+>>>>>>> 73ae4fb8b947c936ed8eafca31016fdf211b7920
 	}
 
 	/*@Override

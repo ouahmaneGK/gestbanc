@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.wha.spring.iservice.ClientService;
 import com.wha.spring.iservice.CompteService;
 import com.wha.spring.model.Client;
@@ -30,11 +29,21 @@ public class ClientController {
 
 	@RequestMapping(value = "/create/nerd", method = RequestMethod.GET)
 	public void nerd() {
+<<<<<<< HEAD
 		/*Client c1 = new Client("Doe", "John", "j.doe@hotmail.fr",
 				"32 rue Nain 59100 Roubaix", "0621222324", "jdoe", "jd", 1500,
 				null);
 		clientService.saveClient(c1);*/
 		/*clientService.modifDecouvert(03020306091, 150);*/
+=======
+		Client c1 = new Client("Bill", "danny", "b.mmm@hotmail.fr", "oooooo59100 Roubaix", "555524", "bhill", "bh", 1500, null);
+		Client c2 = new Client("Till", "kanny", "b.ggg@hotmail.fr", "2 rssssss Roubaix", "8888324", "bhill", "bh", 1500, null);
+		Client c3 = new Client("Kill", "manny", "b.ddddl@hotmail.fr", "qqqqqqq59100 Roubaix", "66666324", "bhill", "bh", 1500, null);
+		
+		//clientService.saveClient(c1);
+		clientService.saveClient(c2);
+		clientService.saveClient(c3);
+>>>>>>> 73ae4fb8b947c936ed8eafca31016fdf211b7920
 	}
 
 	// @CrossOrigin(origins = "http://localhost:4200")
@@ -70,6 +79,7 @@ public class ClientController {
 		List<Client> resultat = clientService.findAllClients();
 		return new ResponseEntity<List<Client>>(resultat, HttpStatus.OK);
 	}
+<<<<<<< HEAD
 
 	@RequestMapping(value = "/modif/decouvert/{idCompte}/{montant}", method = RequestMethod.GET)
 	public Compte modifDecouvert(@PathVariable int idCompte, @PathVariable int montant) {
@@ -78,4 +88,17 @@ public class ClientController {
 		compteService.updateCompte(compte);
 		return compte;
 	}
+=======
+	
+	
+	@RequestMapping("/name/{nom}")
+	public Client rechercheParNom(@PathVariable  String nom){
+		
+		return   clientService.getByName(nom);
+		
+	}
+	
+	
+	
+>>>>>>> 73ae4fb8b947c936ed8eafca31016fdf211b7920
 }
