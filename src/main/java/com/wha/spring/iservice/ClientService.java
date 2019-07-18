@@ -21,10 +21,7 @@ public interface ClientService {
 
 	void reaffectationClient(Client client, Conseiller conseiller);
 
-<<<<<<< HEAD
-	//void modifDecouvert(int idCompte, int montant);
-=======
 	Client getByName(String nom);
->>>>>>> 73ae4fb8b947c936ed8eafca31016fdf211b7920
+
 
 }

@@ -30,20 +30,6 @@ public class CompteController {
 		Compte cpte1 = new Compte(0, "03020306091", "00030200123010235489510", 251, 1500, 42, 5000,1);
 		compteService.saveCompte(cpte1);
 	}
-<<<<<<< HEAD
-=======
-
-		//Compte cpte1 = new Compte(0, "03020306091", "00030200123010235489510", 251, 1500, 42, 5000,1);
-		Compte c1 =new Compte(0, "1111111111", " 55555op", 5000, 200, 100, 6000, 50, null);
-		Compte c2 =new Compte(0, "1111111111", " 55555op", 5000, 200, 100, 6000, 50, null);
-		Compte c3 =new Compte(0, "1111222211", " 655op", 40000, 6000, 500, 7000, 20, null);
-		compteService.saveCompte(c1);
-		compteService.saveCompte(c2);
-		compteService.saveCompte(c3);
-	}
-     */
->>>>>>> 73ae4fb8b947c936ed8eafca31016fdf211b7920
-
 	//@CrossOrigin(origins = "http://localhost:4200")
 	@PostMapping("/create")
 	public Compte createCompte(@RequestBody Compte compte) {

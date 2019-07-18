@@ -83,9 +83,7 @@ public class ConseillerController {
 		return  conseillerService.getByName(nom);	
 	}
 	
-<<<<<<< HEAD
-=======
-	
+
 	// recherche un client par son nom////// Ca marche OK!!
 	
 	@RequestMapping("/clients/name/{nom}")
@@ -94,5 +92,5 @@ public class ConseillerController {
 		return  clientService.getByName(nom);
 		
 	}
->>>>>>> 73ae4fb8b947c936ed8eafca31016fdf211b7920
+
 }
